@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #8d99ae;
+}
+
+.todo-main-flex {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  padding: 3rem;
+  padding-left: 4rem;
+  padding-bottom: 0;
+  padding-right: 5rem;
+}
+.todo-main-flex h1 {
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.todo-main-flex h3 {
+  align-self: flex-start;
+}
+.todo-main-flex nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+.todo-main-flex nav input {
+  height: 3rem;
+  width: 85%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  background-color: #2b2d49;
+  color: #edf2f4;
+}
+.todo-main-flex nav button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #d90429;
+  font-weight: 600;
+}
+.todo-main-flex .tasks-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.7rem;
+}
+.todo-main-flex .tasks-container .taskCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: #2b2d49;
+  border-radius: 0.3rem;
+}
+.todo-main-flex .tasks-container .taskCard-left {
+  display: flex;
+  max-width: 82%;
+  gap: 0.5rem;
+}
+.todo-main-flex .tasks-container .taskCard-left input {
+  cursor: pointer;
+  min-width: 0.8rem;
+}
+.todo-main-flex .tasks-container .taskCard-left div {
+  width: 100%;
+  word-wrap: break-word;
+  color: #edf2f4;
+  outline: none;
+}
+.todo-main-flex .tasks-container .taskCard-left .completed {
+  text-decoration: line-through;
+}
+.todo-main-flex .tasks-container .taskCard-right {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.todo-main-flex .tasks-container .taskCard-right .editBtn {
+  color: #5fa9a2;
+}
+.todo-main-flex .tasks-container .taskCard-right .deleteBtn {
+  color: #ef233c;
+}
+.todo-main-flex .tasks-container .taskCard-right button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+}
+@media (max-width: 1228px) {
+  .todo-main-flex {
+    padding: 2rem;
+  }
+  .todo-main-flex nav {
+    padding-right: 0;
+  }
+  .todo-main-flex nav input {
+    width: 80%;
+  }
+}
+@media (max-width: 1031px) {
+  .todo-main-flex {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  .todo-main-flex nav input {
+    width: 70%;
+  }
+  .todo-main-flex nav button {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .todo-main-flex {
+    width: 90%;
+  }
+  .todo-main-flex nav button {
+    font-size: 0.95rem;
+  }
+}/*# sourceMappingURL=style.css.map */

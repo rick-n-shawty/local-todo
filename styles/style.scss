@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #8d99ae;
+}
+
+.todo-main-flex{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    padding: 3rem;
+    padding-left: 4rem;
+    padding-bottom: 0;
+    padding-right: 5rem;
+    h1{
+        align-self: flex-start;
+        margin: 0;
+        margin-bottom: .5rem;
+    }
+    h3{
+        align-self: flex-start;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+        input{
+            height: 3rem;
+            width: 85%;
+            border-radius: 1rem;
+            padding: .5rem;
+            outline: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2b2d49;
+            color: #edf2f4;
+        }
+        button{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            color: #d90429;
+            font-weight: 600;
+        }
+    }
+    .tasks-container{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+        gap: .7rem;
+        .taskCard{
+            display: flex;
+            flex-wrap: wrap;
+            padding: .5rem;
+            justify-content: space-between;
+            background-color: #2b2d49;
+            border-radius: .3rem;
+            &-left{
+                display: flex;
+                max-width: 82%;
+                gap: .5rem;
+                input{
+                    cursor: pointer;
+                    min-width: .8rem;
+                }
+                div{
+                    width: 100%;
+                    word-wrap: break-word;
+                    color: #edf2f4;
+                    // text-decoration: line-through;
+                    outline: none;
+                }
+                .completed{
+                    text-decoration: line-through;
+                }
+            }
+            &-right{
+                display: flex;
+                justify-content: center;
+                gap: .6rem;
+                .editBtn{
+                    color: #5fa9a2;
+                }
+                .deleteBtn{
+                    color: #ef233c;
+                }
+                button{
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: .9rem;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1228px) {
+        padding: 2rem;
+        nav{
+            input{
+                width: 80%;
+            }
+            padding-right: 0;
+        }
+    };
+    @media (max-width: 1031px) {
+        padding: 0;
+        padding-top: 2rem;
+        nav{
+            input{
+                width: 70%;
+            }
+            button{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        width: 90%;
+        nav{
+            button{
+                font-size: .95rem;
+            }
+        }
+    }
+}
